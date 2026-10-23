@@ -1,0 +1,86 @@
+{
+  "enabled": {
+    "type": "bool",
+    "default": true,
+    "description": "启用日记"
+  },
+  "interval_days": {
+    "type": "int",
+    "default": 1,
+    "description": "写日记频率（每 X 天一次）"
+  },
+  "words": {
+    "type": "int",
+    "default": 400,
+    "description": "正文字数（上下浮动 20%）"
+  },
+  "diary_model_id": {
+    "type": "string",
+    "_special": "select_provider",
+    "default": "",
+    "description": "写日记用的模型（留空=用当前对话模型）"
+  },
+  "mood_model_id": {
+    "type": "string",
+    "_special": "select_provider",
+    "default": "",
+    "description": "判断心情用的模型（留空=用当前对话模型；建议便宜快的）"
+  },
+  "key_threshold": {
+    "type": "int",
+    "default": 90,
+    "description": "发放查看密钥的好感度门槛（严格大于）"
+  },
+  "generate_hour": {
+    "type": "int",
+    "default": 23,
+    "description": "每天几点后允许生成（0-23）"
+  },
+  "min_segments": {
+    "type": "int",
+    "default": 3,
+    "description": "当天有效对话段数少于这个值就不写"
+  },
+  "panel_enabled": {
+    "type": "bool",
+    "default": true,
+    "description": "启用日记查看面板"
+  },
+  "panel_port": {
+    "type": "int",
+    "default": 2566,
+    "description": "管理面板端口（要密码）"
+  },
+  "panel_host": {
+    "type": "string",
+    "default": "0.0.0.0",
+    "description": "面板监听地址"
+  },
+  "persona_file": {
+    "type": "string",
+    "default": "persona.md",
+    "description": "日记用人格文件（留空则运行时读 AstrBot 主人格）"
+  },
+  "keywords": {
+    "type": "list",
+    "default": [
+      "日记",
+      "本子",
+      "本本",
+      "日记本",
+      "密钥",
+      "密码"
+    ],
+    "description": "命中这些词时，才在那一轮注入一句临时提示"
+  },
+  "panel_password": {
+    "type": "string",
+    "default": "",
+    "description": "面板管理密码（留空=首次启动自动生成，写在数据目录 panel_password.txt 并打印到日志）"
+  },
+  "public_port": {
+    "type": "int",
+    "default": 2588,
+    "description": "群友查看页端口（输入密钥看自己那段）"
+  }
+}
