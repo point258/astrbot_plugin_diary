@@ -5,3 +5,7 @@ version: 1.0.1
 desc: 只读记录她说的话和触发她的对话，按天写一篇第一人称日记；凭密钥可以查看与自己有关的那一段。不改人格、不改主上下文。
 short_desc: 偷看她写的日记，只能看跟自己有关的那段
 repo: https://github.com/point258/astrbot_plugin_diary
+
+astrbot_version: ">=4.5.0"
+support_platforms:
+  - aiocqhttp
