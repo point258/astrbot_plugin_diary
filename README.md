@@ -1,4 +1,4 @@
-<img src="logo.png" width="350" alt="偷看孩子日记">
+<img src="logo.png" width="450" alt="偷看孩子日记">
 
 # 偷看孩子日记
 
